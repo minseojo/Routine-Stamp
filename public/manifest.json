@@ -1,0 +1,16 @@
+{
+  "name": "Routine Stamp",
+  "short_name": "Routine Stamp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#FF6B6B",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+.calendar-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 0 100px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 16px 16px;
+}
+
+.calendar-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.nav-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.loading-bar {
+  height: 2px;
+  background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #45B7D1);
+  background-size: 200%;
+  animation: shimmer 1s infinite;
+  margin: 0 16px;
+  border-radius: 99px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 8px 12px 4px;
+}
+
+.day-name {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  padding: 4px 0;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 0 12px;
+}
+
+.calendar-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.04);
+  cursor: pointer;
+  position: relative;
+  gap: 2px;
+  transition: all 0.2s;
+}
+
+.calendar-cell.empty {
+  background: transparent;
+  pointer-events: none;
+}
+
+.calendar-cell:not(.empty):hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.05);
+}
+
+.calendar-cell.today {
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.3);
+}
+
+.calendar-cell.stamped {
+  background: rgba(255,107,107,0.2);
+}
+
+.day-number {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+}
+
+.calendar-cell.today .day-number {
+  color: #fff;
+  font-weight: 700;
+}
+
+.stamp-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.calendar-footer {
+  padding: 24px 16px;
+}
+
+.today-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(255,107,107,0.4);
+}
+
+.today-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255,107,107,0.5);
+}
+
+.today-btn:active {
+  transform: translateY(0);
+}
