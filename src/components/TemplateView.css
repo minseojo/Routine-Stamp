@@ -267,6 +267,30 @@
   transform: scale(0.95); /* 눌렀을 때 반응형 피드백 */
 }
 
+@media (max-width: 380px) {
+  .setup-grid {
+    gap: 6px;
+  }
+  .setup-item {
+    padding: 10px 2px;
+  }
+  .stepper-mini {
+    gap: 4px;
+  }
+  .stepper-mini button {
+    width: 26px;
+    height: 26px;
+    font-size: 0.9rem;
+  }
+  .stepper-mini span {
+    font-size: 0.9rem;
+    min-width: 18px;
+  }
+  .ex-name {
+    font-size: 0.9rem;
+  }
+}
+
 .stepper-mini span {
   font-weight: 800;
   font-size: 1.05rem;

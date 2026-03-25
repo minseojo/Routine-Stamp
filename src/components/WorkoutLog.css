@@ -136,9 +136,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 1; /* Allow slight shrink on tight screens */
   transition: background 0.15s;
   line-height: 1;
+}
+
+@media (max-width: 380px) {
+  .exercise-list {
+    padding: 8px;
+  }
+  .exercise-card {
+    padding: 12px;
+  }
+  .set-row, .sets-header {
+    grid-template-columns: 28px 1fr 1fr;
+    gap: 4px;
+  }
+  .step-btn {
+    width: 36px;
+    font-size: 1.2rem;
+  }
+  .step-input {
+    font-size: 0.95rem;
+    min-width: 30px;
+  }
 }
 
 .step-btn:active {
