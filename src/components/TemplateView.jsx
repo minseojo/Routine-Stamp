@@ -107,6 +107,19 @@ function TemplateView({ userId, onBack }) {
     })
   }
 
+  function handleInputChange(id, field, value) {
+    const parsed = value === '' ? 0 : parseFloat(value)
+    setTemplate({
+      ...template,
+      [activeDay]: activeRoutines.map(t => {
+        if (t.id === id) {
+          return { ...t, [field]: isNaN(parsed) ? 0 : parsed }
+        }
+        return t
+      })
+    })
+  }
+
   function handleOpenDaySelect(type, presetObj = null) {
     // 미리 현재 탭(activeDay)을 체크 상태로 만듭니다.
     setSelectedDays([activeDay])
@@ -232,7 +245,12 @@ function TemplateView({ userId, onBack }) {
                   <span className="setup-label">세트</span>
                   <div className="stepper-mini">
                     <button onClick={() => updateEx(ex.id, 'sets', -1)}>−</button>
-                    <span>{ex.sets}</span>
+                    <input 
+                      type="number"
+                      inputMode="numeric"
+                      value={ex.sets}
+                      onChange={(e) => handleInputChange(ex.id, 'sets', e.target.value)}
+                    />
                     <button onClick={() => updateEx(ex.id, 'sets', 1)}>+</button>
                   </div>
                 </div>
@@ -240,7 +258,12 @@ function TemplateView({ userId, onBack }) {
                   <span className="setup-label">횟수</span>
                   <div className="stepper-mini">
                     <button onClick={() => updateEx(ex.id, 'defaultReps', -1)}>−</button>
-                    <span>{ex.defaultReps}</span>
+                    <input 
+                      type="number"
+                      inputMode="numeric"
+                      value={ex.defaultReps}
+                      onChange={(e) => handleInputChange(ex.id, 'defaultReps', e.target.value)}
+                    />
                     <button onClick={() => updateEx(ex.id, 'defaultReps', 1)}>+</button>
                   </div>
                 </div>
@@ -248,7 +271,12 @@ function TemplateView({ userId, onBack }) {
                   <span className="setup-label">무게({unit})</span>
                   <div className="stepper-mini">
                     <button onClick={() => updateEx(ex.id, 'defaultWeight', unit === 'kg' ? -5 : -10)}>−</button>
-                    <span>{ex.defaultWeight}</span>
+                    <input 
+                      type="number"
+                      inputMode="decimal"
+                      value={ex.defaultWeight}
+                      onChange={(e) => handleInputChange(ex.id, 'defaultWeight', e.target.value)}
+                    />
                     <button onClick={() => updateEx(ex.id, 'defaultWeight', unit === 'kg' ? 5 : 10)}>+</button>
                   </div>
                 </div>
