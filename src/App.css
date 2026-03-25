@@ -40,21 +40,25 @@ body {
   justify-content: space-between;
 }
 
+.template-btn,
 .logout-btn {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.8);
   font-size: 0.78rem;
+  font-weight: 600;
   font-family: inherit;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 99px;
   cursor: pointer;
   transition: all 0.2s;
+  margin-left: 8px;
 }
 
+.template-btn:hover,
 .logout-btn:hover {
-  background: rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
 }
 
 .app-loading {

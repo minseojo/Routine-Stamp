@@ -1,8 +1,50 @@
-# React + Vite
+# ## Routine Stamp (루틴 스탬프)
+Stamp your routines and track your progress!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1666" height="1016" alt="image" src="https://github.com/user-attachments/assets/3fcd45ec-de03-427e-b26a-e888c7506aa8" />
 
-Currently, two official plugins are available:
+## 🔗 링크
+[Routine Stamp 바로가기](https://routine-stamp.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 목표
+복잡한 기능 없이, 정해진 '전심 무분할 8개 종목' 뿐만 아니라 사용자 정의 주간 루틴을 직관적으로 기록하고 캘린더에 도장을 찍어 성취감을 주는 초간단 운동 기록 웹앱입니다.
+
+## ✨ 주요 기능
+
+### 📅 맞춤형 주간 루틴 관리 (Weekly Routine)
+- **요일별 루틴 설정**: 일요일부터 토요일까지 각 요일별로 원하는 운동을 배치할 수 있습니다.
+- **다양한 운동 라이브러리**: 가슴, 등, 하체, 어깨, 팔, 코어 등 부위별로 세분화된 운동 정보를 제공합니다.
+- **간편한 운동 추가**: 카테고리별로 필터링된 운동 목록에서 클릭 한 번으로 루틴에 추가할 수 있습니다.
+
+### 🏆 운동 프리셋 (Presets)
+초보자부터 숙련자까지 바로 사용할 수 있는 검증된 루틴 프리셋을 제공합니다.
+- **입문자용 전신 (5종/8종)**: 헬스가 처음인 분들을 위한 기초 머신 위주 루틴
+- **분할 루틴 (Push / Pull / Leg)**: 부위별 집중 타격을 위한 3분할 기반 프리셋
+
+### 📝 실시간 운동 기록
+- 루틴에 등록된 운동을 바탕으로 세트 수, 횟수, 무게를 간편하게 기록할 수 있습니다.
+- 운동 부위별 컬러 시스템을 통해 시각적으로 균형 잡힌 운동을 계획할 수 있습니다.
+
+## 🛠 기술 스택
+- **Frontend**: React, Vite
+- **Styling**: Vanilla CSS (Modern UI/UX)
+- **Icons**: Lucide React
+
+## 🏃 시작하기
+
+```bash
+# 의존성 설치
+npm install
+
+# 로컬 서버 실행
+npm run dev
+```
+
+## ⚠️ 제약사항
+- 1시간 2인 회원가입 가능 (이메일 요청 제한)
+- 개인 운동 루틴 기록 최적화
+
+## 📸 최근 업데이트 (v1.1.0)
+- **워크아웃 템플릿 관리 뷰 추가**: 주간 루틴 편집 기능 강화
+- **프리셋 시스템 도입**: 원클릭으로 주간 루틴(월/수/금) 생성 지원
+- **운동 라이브러리 확장**: 주요 부위별 30종 이상의 운동 추가

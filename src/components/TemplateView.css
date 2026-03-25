@@ -1,0 +1,378 @@
+.template-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+.template-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 16px 16px;
+  background: #0f0f1a;
+  z-index: 10;
+}
+
+.day-tabs {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+  background: #0f0f1a;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.day-tab {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.day-tab.active {
+  color: #FF6B6B;
+  font-weight: 800;
+}
+
+.day-dot {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #4ECDC4;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.copy-btn:hover {
+  color: #fff;
+}
+
+.template-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.template-subtitle {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.template-content {
+  padding: 16px 16px 120px; /* 완료 버튼과 겹치지 않도록 하단 여백 대폭 추가 */
+}
+
+.unit-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  background: rgba(255,255,255,0.04);
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.unit-toggle label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.unit-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.unit-buttons button {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.unit-buttons button.active {
+  background: #FF6B6B;
+}
+
+.preset-scroll {
+  margin-bottom: 24px;
+}
+
+.preset-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+}
+
+.preset-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.preset-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.preset-btn {
+  background: rgba(255,107,107,0.15);
+  border: 1px solid rgba(255,107,107,0.3);
+  color: #FF6B6B;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preset-btn:hover {
+  background: rgba(255,107,107,0.3);
+}
+
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  border: 1px dashed rgba(255,255,255,0.1);
+}
+
+.template-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.template-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.idx-badge {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.remove-btn {
+  background: rgba(255,107,107,0.1);
+  color: #FF6B6B;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.remove-btn:hover {
+  background: rgba(255,107,107,0.2);
+}
+
+.setup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.setup-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.03);
+  padding: 14px 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.setup-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+.stepper-mini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* 버튼과 숫자 간격 최적화 */
+}
+
+.stepper-mini button {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #fff;
+  width: 32px; /* 살짝 키워서 터치감 개선 */
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.stepper-mini button:active {
+  background: rgba(255,255,255,0.2);
+  transform: scale(0.95); /* 눌렀을 때 반응형 피드백 */
+}
+
+.stepper-mini span {
+  font-weight: 800;
+  font-size: 1.05rem;
+  min-width: 24px;
+  text-align: center;
+  font-variant-numeric: tabular-nums; /* 숫자 너비 고정으로 가변 방지 */
+}
+
+.add-ex-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-ex-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* 모달 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.picker-modal {
+  background: #1a1a2e;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px 24px 0 0;
+  padding: 24px 20px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.picker-title {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.picker-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.picker-group {
+  margin-bottom: 20px;
+}
+
+.picker-group-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 4px;
+}
+
+.picker-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.picker-item {
+  background: rgba(255,255,255,0.05);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.picker-item.selected {
+  background: #FF6B6B;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.picker-close {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  padding: 16px;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
