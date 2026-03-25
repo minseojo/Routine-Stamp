@@ -243,31 +243,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.06); /* 컨테이너에 배경 적용 */
-  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
   overflow: hidden;
-  height: 32px;
-  width: 100%; /* 너비 꽉 채우기 */
+  height: 42px; /* 충분한 터치 영역 확보를 위해 더 키움 */
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .stepper-mini button {
-  background: none; /* 버튼 개별 배경 제거 */
+  background: rgba(255,255,255,0.03); /* 약간의 배경 차이 */
   border: none;
-  color: rgba(255,255,255,0.7);
-  width: 32px;
+  color: #fff;
+  width: 40px; 
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 300;
   cursor: pointer;
-  transition: all 0.1s ease;
+  transition: all 0.2s;
   flex-shrink: 0;
 }
 
 .stepper-mini button:active {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,107,107,0.2); /* 주황/빨강 계열의 피드백 */
+  color: #FF6B6B;
 }
 
 @media (max-width: 380px) {
@@ -290,17 +292,16 @@
     text-align: center;
   }
   .stepper-mini {
-    height: 28px;
-    border-radius: 8px;
+    height: 38px;
+    border-radius: 10px;
   }
   .stepper-mini button {
-    width: 28px;
-    font-size: 1rem;
+    width: 34px;
+    font-size: 1.2rem;
   }
   .stepper-mini input {
-    font-size: 0.9rem;
-    width: 20px;
-    flex: 1; /* 인풋이 중앙 공간 차지 */
+    font-size: 1rem;
+    width: 22px;
   }
   .ex-name {
     font-size: 0.85rem;
@@ -308,18 +309,28 @@
 }
 
 .stepper-mini input {
-  background: none;
+  background: transparent;
   border: none;
   color: #fff;
   font-family: inherit;
   font-weight: 800;
-  font-size: 1rem;
-  width: 32px;
+  font-size: 1.1rem;
+  width: 38px; /* 숫자 폭 약간 확대 */
+  height: 100%;
+  padding: 0;
   flex: 1;
   text-align: center;
   outline: none;
+  border-left: 1px solid rgba(255,255,255,0.05); /* 경계선 추가 */
+  border-right: 1px solid rgba(255,255,255,0.05);
   -moz-appearance: textfield;
   appearance: textfield;
+  transition: all 0.2s;
+}
+
+.stepper-mini input:focus {
+  background: rgba(255, 107, 107, 0.08); /* 주황 계열 포커스 */
+  color: #FF6B6B;
 }
 
 .stepper-mini input::-webkit-outer-spin-button,
