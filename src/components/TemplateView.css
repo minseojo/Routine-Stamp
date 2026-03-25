@@ -218,8 +218,8 @@
 
 .setup-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Force equal and responsive widths */
+  gap: 10px;
 }
 
 .setup-item {
@@ -250,8 +250,8 @@
   background: rgba(255,255,255,0.08);
   border: none;
   color: #fff;
-  width: 32px; /* 살짝 키워서 터치감 개선 */
-  height: 32px;
+  width: 30px; /* 조금 더 작게 조정 */
+  height: 30px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -268,26 +268,39 @@
 }
 
 @media (max-width: 380px) {
+  .template-content {
+    padding: 12px 10px 120px;
+  }
   .setup-grid {
-    gap: 6px;
+    gap: 4px; /* 최소 간격 */
   }
   .setup-item {
-    padding: 10px 2px;
+    padding: 8px 1px;
+    border-radius: 8px;
+  }
+  .setup-label {
+    font-size: 0.65rem; /* 더 작게 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
   }
   .stepper-mini {
-    gap: 4px;
+    gap: 2px;
   }
   .stepper-mini button {
-    width: 26px;
-    height: 26px;
-    font-size: 0.9rem;
+    width: 21px; /* 좁은 화면에서 더 작게 */
+    height: 21px;
+    font-size: 0.8rem;
+    border-radius: 5px;
   }
   .stepper-mini span {
-    font-size: 0.9rem;
-    min-width: 18px;
+    font-size: 0.85rem;
+    min-width: 16px;
   }
   .ex-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 

@@ -229,7 +229,7 @@ function TemplateView({ userId, onBack }) {
 
               <div className="setup-grid">
                 <div className="setup-item">
-                  <span className="setup-label">세트 수</span>
+                  <span className="setup-label">세트</span>
                   <div className="stepper-mini">
                     <button onClick={() => updateEx(ex.id, 'sets', -1)}>−</button>
                     <span>{ex.sets}</span>
@@ -237,7 +237,7 @@ function TemplateView({ userId, onBack }) {
                   </div>
                 </div>
                 <div className="setup-item">
-                  <span className="setup-label">기본 횟수</span>
+                  <span className="setup-label">횟수</span>
                   <div className="stepper-mini">
                     <button onClick={() => updateEx(ex.id, 'defaultReps', -1)}>−</button>
                     <span>{ex.defaultReps}</span>
@@ -245,7 +245,7 @@ function TemplateView({ userId, onBack }) {
                   </div>
                 </div>
                 <div className="setup-item">
-                  <span className="setup-label">기본 무게 ({unit})</span>
+                  <span className="setup-label">무게({unit})</span>
                   <div className="stepper-mini">
                     <button onClick={() => updateEx(ex.id, 'defaultWeight', unit === 'kg' ? -5 : -10)}>−</button>
                     <span>{ex.defaultWeight}</span>
