@@ -13,14 +13,15 @@ const DAYS = [
   { val: 0, label: '일' }
 ]
 
-function TemplateView({ userId, onBack }) {
+function TemplateView({ userId, onBack, initialDay }) {
   const [template, setTemplate] = useState({
     0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: []
   })
   const [unit, setUnit] = useState('kg')
-  const [activeDay, setActiveDay] = useState(1) // 기본: 월요일
+  const [activeDay, setActiveDay] = useState(initialDay ?? 1) // initialDay prop 또는 기본값 월요일
   const [saving, setSaving] = useState(false)
   const [showExPicker, setShowExPicker] = useState(false)
+  const [selectedExsPicker, setSelectedExsPicker] = useState([]) // 버그 수정: 누락된 state 선언
   
   // 모달 관리: { type: 'COPY_CURRENT' } | { type: 'APPLY_PRESET', preset: presetObject } | null
   const [daySelectModal, setDaySelectModal] = useState(null)
