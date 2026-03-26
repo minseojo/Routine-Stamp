@@ -356,7 +356,7 @@ function TemplateView({ userId, onBack, initialDay }) {
                         <button 
                           key={ex.id} 
                           className={`picker-item ${isAlreadyInRoutine ? 'selected' : isSelectedInPicker ? 'active-select' : ''}`}
-                          style={isSelectedInPicker ? { background: '#4ECDC4', color: '#000', fontWeight: 'bold' } : {}}
+                          style={isSelectedInPicker ? { background: '#FF6B6B', color: '#fff', fontWeight: 'bold' } : {}}
                           onClick={() => togglePickerExercise(ex)}
                           disabled={isAlreadyInRoutine}
                         >
@@ -368,7 +368,21 @@ function TemplateView({ userId, onBack, initialDay }) {
                 </div>
               ))}
             </div>
-            <button className="picker-close" onClick={() => setShowExPicker(false)}>닫기</button>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <button className="picker-close" style={{ flex: 1, marginTop: 0 }} onClick={() => setShowExPicker(false)}>닫기</button>
+              <button
+                onClick={commitSelectedExercises}
+                style={{
+                  flex: 2, padding: '16px', borderRadius: '16px',
+                  background: selectedExsPicker.length > 0 ? '#FF6B6B' : 'rgba(255,255,255,0.15)',
+                  border: 'none', color: '#fff', fontWeight: 700, fontSize: '1rem',
+                  cursor: selectedExsPicker.length > 0 ? 'pointer' : 'default',
+                  transition: 'all 0.2s', opacity: selectedExsPicker.length > 0 ? 1 : 0.55
+                }}
+              >
+                {selectedExsPicker.length > 0 ? `${selectedExsPicker.length}개 추가하기 ✓` : '운동을 선택하세요'}
+              </button>
+            </div>
           </div>
         </div>
       )}
